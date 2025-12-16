@@ -1,339 +1,153 @@
-/* ========== Сброс и базовые стили ========== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// script.js - реализация интерактивных элементов
 
-:root {
-    --gold: #f5c518;
-}
+// 1. Счетчик посещений с использованием localStorage
+document.addEventListener('DOMContentLoaded', function () {
+    // Инициализация счетчика посещений
+    initVisitCounter();
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #cbd5e1;
-    /* Светло-серый текст — читаем на тёмных фонах */
-    background-color: #0f1a24;
-}
+    // Инициализация слайдера проектов
+    initProjectSlider();
 
-.main {
-    overflow-x: hidden;
-}
+    // Инициализация кнопки показа/скрытия команды
+    initTeamToggle();
+});
 
-/* ========== Контейнер ========== */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+// Функция для счетчика посещений
+function initVisitCounter() {
+    let visitCount = localStorage.getItem('visitCount');
 
-/* ========== Hero ========== */
-.hero {
-    padding: 5rem 0 4rem;
-    text-align: center;
-    background: linear-gradient(135deg, #0d151c 0%, #1a232f 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(245, 197, 24, 0.05) 0%, transparent 70%);
-    z-index: 0;
-}
-
-.hero>.container {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 1.2rem;
-    background: linear-gradient(90deg, var(--gold), #ffffff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.hero-subtitle {
-    font-size: 1.3rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    color: #cbd5e1;
-}
-
-/* ========== Кнопки ========== */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    color: #0f1a24;
-}
-
-.btn-primary {
-    background: var(--gold);
-}
-
-.btn-primary:hover {
-    background: #ffd740;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(245, 197, 24, 0.4);
-}
-
-/* ========== О нас ========== */
-.about {
-    padding: 3rem 0;
-    background: #0f1a24;
-}
-
-.about h2 {
-    color: #ffffff;
-    margin-bottom: 1.8rem;
-}
-
-.about-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    color: #cbd5e1;
-}
-
-/* ========== Технологии ========== */
-.tech-stack {
-    padding: 4rem 0;
-    background: #121212;
-}
-
-.tech-stack h2 {
-    color: #ffffff;
-    margin-bottom: 1.8rem;
-}
-
-.tech-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem;
-    margin-top: 1.5rem;
-}
-
-.tech-item {
-    background: #1e293b;
-    padding: 0.8rem 1.4rem;
-    border-radius: 8px;
-    font-weight: 600;
-    color: #f5c518;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-}
-
-.tech-item:hover {
-    transform: scale(1.05);
-}
-
-/* ========== Проекты ========== */
-.projects {
-    padding: 4rem 0;
-    background: #0f1a24;
-}
-
-.projects h2 {
-    color: #ffffff;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 1.5rem;
-}
-
-.project-card {
-    background: #1e293b;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.project-card h3 {
-    color: #ffffff;
-    margin-bottom: 0.8rem;
-    font-size: 1.4rem;
-}
-
-.project-card p {
-    color: #cbd5e1;
-    margin-bottom: 1rem;
-}
-
-.project-link {
-    display: inline-block;
-    color: var(--gold);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.05rem;
-}
-
-.project-link:hover {
-    text-decoration: underline;
-}
-
-/* ========== Статистика ========== */
-.stats {
-    padding: 3.5rem 0;
-    background: #0f1a24;
-}
-
-.stats-grid {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: var(--gold);
-}
-
-.stat-label {
-    display: block;
-    font-size: 1.1rem;
-    color: #cbd5e1;
-    margin-top: 0.4rem;
-}
-
-/* ========== Команда ========== */
-.team {
-    padding: 4rem 0;
-    background: #121212;
-}
-
-.team h2 {
-    color: #ffffff;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2.5rem;
-    justify-items: center;
-}
-
-.team-member {
-    text-align: center;
-    max-width: 220px;
-}
-
-.avatar-wrapper {
-    position: relative;
-    display: inline-block;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 140px;
-    height: 140px;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.avatar-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.team-member p {
-    color: #ffffff;
-    font-size: 1.2rem;
-    margin: 0.5rem 0 0.3rem;
-}
-
-.role {
-    display: block;
-    font-size: 0.95rem;
-    color: #a0aec0;
-    margin-top: 0.3rem;
-}
-
-/* ========== Контакты ========== */
-.contact {
-    padding: 4rem 0;
-    text-align: center;
-    background: #000000;
-}
-
-.contact h2,
-.contact p {
-    color: #ffffff;
-}
-
-.email-link {
-    display: inline-block;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: var(--gold);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.email-link:hover {
-    text-decoration: underline;
-}
-
-/* ========== Адаптивность ========== */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2rem;
+    if (visitCount === null) {
+        // Первое посещение
+        visitCount = 1;
+    } else {
+        // Увеличиваем счетчик
+        visitCount = parseInt(visitCount) + 1;
     }
 
-    .hero-subtitle {
-        font-size: 1.1rem;
+    // Сохраняем в localStorage
+    localStorage.setItem('visitCount', visitCount);
+
+    // Отображаем счетчик на странице
+    document.getElementById('visitCount').textContent = visitCount;
+}
+
+// 2. Слайдер проектов
+function initProjectSlider() {
+    const projects = [
+        {
+            title: "Интернет-магазин электроники",
+            description: "Полнофункциональный онлайн-магазин с системой управления заказами, интеграцией платежей и рекомендательной системой.",
+            tech: "React, Node.js, MongoDB",
+            image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+            title: "Мобильное приложение для доставки еды",
+            description: "Кроссплатформенное приложение с функциями заказа, отслеживания доставки в реальном времени и системой оценок.",
+            tech: "React Native, Firebase, Google Maps API",
+            image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+            title: "Корпоративный портал для управления проектами",
+            description: "Веб-приложение для управления задачами, отслеживания времени и командного collaboration.",
+            tech: "Vue.js, Express.js, PostgreSQL",
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+            title: "Образовательная платформа с курсами",
+            description: "Система онлайн-обучения с видеоуроками, тестированием и отслеживанием прогресса студентов.",
+            tech: "Angular, Django, AWS S3",
+            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+            title: "Приложение для планирования путешествий",
+            description: "Сервис для планирования маршрутов, бронирования отелей и составления itineraries.",
+            tech: "Next.js, NestJS, Redis",
+            image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        }
+    ];
+
+    const slider = document.getElementById('projectSlider');
+    const dotsContainer = document.getElementById('projectDots');
+
+    // Создаем слайды и точки навигации
+    projects.forEach((project, index) => {
+        // Создаем слайд
+        const slide = document.createElement('div');
+        slide.className = 'slide';
+        slide.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(${project.image})`;
+
+        const slideContent = document.createElement('div');
+        slideContent.className = 'slide-content';
+        slideContent.innerHTML = `
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <p><strong>Технологии:</strong> ${project.tech}</p>
+        `;
+
+        slide.appendChild(slideContent);
+        slider.appendChild(slide);
+
+        // Создаем точку навигации
+        const dot = document.createElement('div');
+        dot.className = `dot ${index === 0 ? 'active' : ''}`;
+        dot.dataset.index = index;
+
+        dot.addEventListener('click', function () {
+            goToSlide(parseInt(this.dataset.index));
+        });
+
+        dotsContainer.appendChild(dot);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    // Функция для перехода к конкретному слайду
+    function goToSlide(n) {
+        currentSlide = n;
+
+        // Обновляем позицию слайдера
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Обновляем активную точку
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
     }
 
-    .stat-number {
-        font-size: 2.2rem;
-    }
+    // Обработчики для кнопок навигации
+    document.getElementById('prevBtn').addEventListener('click', function () {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        goToSlide(currentSlide);
+    });
 
-    .tech-item {
-        padding: 0.6rem 1rem;
-        font-size: 0.95rem;
-    }
+    document.getElementById('nextBtn').addEventListener('click', function () {
+        currentSlide = (currentSlide + 1) % slides.length;
+        goToSlide(currentSlide);
+    });
 
-    .projects-grid,
-    .team-grid {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
+    // Автоматическое переключение слайдов каждые 5 секунд
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        goToSlide(currentSlide);
+    }, 5000);
+}
 
-    .stats-grid {
-        gap: 2rem;
-    }
+// 3. Кнопка показа/скрытия команды
+function initTeamToggle() {
+    const toggleBtn = document.getElementById('toggleTeamBtn');
+    const teamDetails = document.getElementById('teamDetails');
+
+    toggleBtn.addEventListener('click', function () {
+        // Переключаем видимость блока с деталями
+        teamDetails.classList.toggle('active');
+
+        // Меняем текст кнопки
+        if (teamDetails.classList.contains('active')) {
+            toggleBtn.innerHTML = '<i class="fas fa-users"></i> Скрыть подробности о команде';
+        } else {
+            toggleBtn.innerHTML = '<i class="fas fa-users"></i> Показать подробности о команде';
+        }
+    });
 }
