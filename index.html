@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-отдел колледжа | Технологии для образования</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="script.js">
+
+</head>
+
+<body>
+    <!-- Шапка с навигацией -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-server logo-icon"></i>
+                <span class="logo-text">IT-отдел колледжа</span>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#team">Команда</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Технологии для современного образования</h1>
+            <p>Обеспечиваем технологическую основу для инновационного обучения, исследований и эффективной работы
+                всего
+                колледжа. От идеи до внедрения.</p>
+            <a href="#projects" class="btn">Наши проекты</a>
+            <a href="#contact" class="btn btn-accent">Связаться с нами</a>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-text">Компьютеров</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-text">Поддержка</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-text">Серверов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-text">Систем</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Наши проекты</h2>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все проекты</button>
+                <button class="filter-btn" data-filter="infrastructure">Инфраструктура</button>
+                <button class="filter-btn" data-filter="software">ПО</button>
+                <button class="filter-btn" data-filter="security">Безопасность</button>
+                <button class="filter-btn" data-filter="education">Образование</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Проект 1 -->
+                <div class="project-card" data-category="infrastructure">
+                    <div class="project-img">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Модернизация Wi-Fi сети</h3>
+                        <div class="project-tags">
+                            <span class="tag infrastructure">Инфраструктура</span>
+                            <span class="tag">Завершен</span>
+                            <span class="tag">2023</span>
+                        </div>
+                        <p>Полное обновление беспроводной сети колледжа с установкой 50+ точек доступа. Увеличение
+                            скорости в 3 раза и расширение зоны покрытия.</p>
+                    </div>
+                </div>
+
+                <!-- Проект 2 -->
+                <div class="project-card" data-category="software education">
+                    <div class="project-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Внедрение СДО Moodle</h3>
+                        <div class="project-tags">
+                            <span class="tag software">ПО</span>
+                            <span class="tag education">Образование</span>
+                            <span class="tag">В работе</span>
+                        </div>
+                        <p>Развертывание системы дистанционного обучения для 2000+ студентов и 150+ преподавателей.
+                            Интеграция с электронным журналом.</p>
+                    </div>
+                </div>
+
+                <!-- Проект 3 -->
+                <div class="project-card" data-category="security">
+                    <div class="project-img">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Система кибербезопасности</h3>
+                        <div class="project-tags">
+                            <span class="tag security">Безопасность</span>
+                            <span class="tag">Завершен</span>
+                            <span class="tag">2024</span>
+                        </div>
+                        <p>Внедрение многоуровневой системы защиты данных: брандмауэры, антивирусы, шифрование и
+                            обучение сотрудников.</p>
+                    </div>
+                </div>
+
+                <!-- Проект 4 -->
+                <div class="project-card" data-category="infrastructure">
+                    <div class="project-img">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Миграция в облако</h3>
+                        <div class="project-tags">
+                            <span class="tag infrastructure">Инфраструктура</span>
+                            <span class="tag">Завершен</span>
+                            <span class="tag">2022</span>
+                        </div>
+                        <p>Перенос почты, документов и систем колледжа на защищенные облачные платформы с резервным
+                            копированием.</p>
+                    </div>
+                </div>
+
+                <!-- Проект 5 -->
+                <div class="project-card" data-category="software">
+                    <div class="project-img">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Система тикетов</h3>
+                        <div class="project-tags">
+                            <span class="tag software">ПО</span>
+                            <span class="tag">Завершен</span>
+                            <span class="tag">2023</span>
+                        </div>
+                        <p>Внедрение системы GLPI для автоматизации IT-поддержки. Сократили время реакции на заявки
+                            на
+                            40%.</p>
+                    </div>
+                </div>
+
+                <!-- Проект 6 -->
+                <div class="project-card" data-category="education">
+                    <div class="project-img">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>ВКС для дистанта</h3>
+                        <div class="project-tags">
+                            <span class="tag education">Образование</span>
+                            <span class="tag">В работе</span>
+                        </div>
+                        <p>Развертывание системы видеоконференцсвязи в 20 аудиториях для гибридного обучения и
+                            онлайн-совещаний.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Услуги и поддержка</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Техподдержка</h3>
+                    <p>Оперативная помощь с компьютерами, ПО, оргтехникой для сотрудников и студентов.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Сети и серверы</h3>
+                    <p>Администрирование сетевой инфраструктуры, серверов и систем хранения данных.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Безопасность</h3>
+                    <p>Защита данных, антивирусная защита, резервное копирование и обучение ИБ.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Учебные классы</h3>
+                    <p>Обслуживание компьютерных классов, интерактивных панелей и лабораторий.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Разработка</h3>
+                    <p>Создание и поддержка сайта колледжа, порталов и внутренних систем.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>1С и системы</h3>
+                    <p>Поддержка и развитие 1С, LMS и других профильных систем колледжа.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Команда -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2>Наша команда</h2>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Алексей Петров</h3>
+                        <div class="member-role">Руководитель IT-отдела</div>
+                        <div class="member-expertise">Сети, инфраструктура, облачные технологии</div>
+                        <p>Обеспечивает стратегическое развитие IT-инфраструктуры колледжа.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Мария Сидорова</h3>
+                        <div class="member-role">Системный администратор</div>
+                        <div class="member-expertise">1С, СУБД, образовательные системы</div>
+                        <p>Автоматизирует административные и учебные процессы.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Дмитрий Иванов</h3>
+                        <div class="member-role">Специалист по безопасности</div>
+                        <div class="member-expertise">Кибербезопасность, защита данных</div>
+                        <p>Защищает информацию и проводит обучение по ИБ.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Елена Козлова</h3>
+                        <div class="member-role">Инженер техподдержки</div>
+                        <div class="member-expertise">ПК, оргтехника, пользовательская поддержка</div>
+                        <p>Решает технические проблемы сотрудников и студентов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Свяжитесь с нами</h3>
+                    <p>Мы всегда готовы помочь с техническими вопросами и обсудить новые проекты.</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>г. Москва, ул. Образовательная, д. 15<br>Корпус А, кабинет 301 (3 этаж)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+7 (495) 123-45-67 (внутр. 301)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>it-department@college.edu</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Часы работы</h4>
+                            <p>Пн-Пт: 9:00 - 18:00<br>Экстренная поддержка: 24/7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Форма обращения</h3>
+                    <form id="supportForm">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="text" placeholder="Тема" required>
+                        <textarea placeholder="Опишите вашу проблему или вопрос" required></textarea>
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </form>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--gray);">Или создайте тикет в <a href="#"
+                            style="color: var(--secondary);">системе GLPI</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <i class="fas fa-server logo-icon"></i>
+                        <span class="logo-text">IT-отдел колледжа</span>
+                    </div>
+                    <p style="margin-top: 15px; color: #ddd;">Технологии на службе образования. Стабильная работа —
+                        наша
+                        основа.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#team">Команда</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Ресурсы</h4>
+                    <ul>
+                        <li><a href="#">База знаний</a></li>
+                        <li><a href="#">Инструкции</a></li>
+                        <li><a href="#">Форум поддержки</a></li>
+                        <li><a href="#">Расписание работ</a></li>
+                        <li><a href="#">Новости IT</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="mailto:it-department@college.edu">it-department@college.edu</a></li>
+                        <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+                        <li>Корпус А, каб. 301</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 IT-отдел колледжа. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
