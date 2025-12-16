@@ -66,3 +66,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Эффект для кнопок "Подробнее" в проектах
+document.querySelectorAll('.view-project-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const projectTitle = this.closest('.project-card').querySelector('h3').textContent;
+        alert(`Подробная информация о проекте "${projectTitle}" будет открыта в новом окне.`);
+    });
+});

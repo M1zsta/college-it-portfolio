@@ -1,4 +1,3 @@
-/* Базовые стили и переменные */ 
 :root {
     --primary: #2c3e50;
     --secondary: #3498db;
@@ -9,7 +8,7 @@
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
- 
+
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +22,7 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333; 
+    color: #333;
     background-color: #f9f9f9;
 }
 
@@ -218,7 +217,7 @@ header {
     font-weight: 600;
 }
 
-/* Проекты */
+/* Проекты - ОБНОВЛЕННЫЙ СТИЛЬ С ИЗОБРАЖЕНИЯМИ */
 .projects {
     background-color: white;
 }
@@ -266,14 +265,56 @@ header {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Новый стиль для изображений проектов */
 .project-img {
     height: 200px;
-    background-color: #ddd;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.05);
+}
+
+.project-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gray);
-    font-size: 3rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-img-overlay {
+    opacity: 1;
+}
+
+.view-project-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .view-project-btn {
+    transform: translateY(0);
 }
 
 .project-content {
@@ -314,6 +355,50 @@ header {
 .tag.education {
     background-color: #f0fff4;
     color: #27ae60;
+}
+
+.tag.automation {
+    background-color: #f5f0ff;
+    color: #8e44ad;
+}
+
+.tag.completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.tag.in-progress {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.tag.planned {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.status-completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-in-progress {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-planned {
+    background-color: #d1ecf1;
+    color: #0c5460;
 }
 
 /* Услуги */
@@ -374,6 +459,12 @@ header {
     justify-content: center;
     color: var(--gray);
     font-size: 5rem;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .member-info {

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT-отдел колледжа | Технологии для образования</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="script.js">
 
@@ -37,8 +38,7 @@
     <section class="hero" id="home">
         <div class="container">
             <h1>Технологии для современного образования</h1>
-            <p>Обеспечиваем технологическую основу для инновационного обучения, исследований и эффективной работы
-                всего
+            <p>Обеспечиваем технологическую основу для инновационного обучения, исследований и эффективной работы всего
                 колледжа. От идеи до внедрения.</p>
             <a href="#projects" class="btn">Наши проекты</a>
             <a href="#contact" class="btn btn-accent">Связаться с нами</a>
@@ -75,114 +75,147 @@
                 <button class="filter-btn" data-filter="software">ПО</button>
                 <button class="filter-btn" data-filter="security">Безопасность</button>
                 <button class="filter-btn" data-filter="education">Образование</button>
+                <button class="filter-btn" data-filter="automation">Автоматизация</button>
             </div>
 
             <div class="projects-grid">
                 <!-- Проект 1 -->
                 <div class="project-card" data-category="infrastructure">
                     <div class="project-img">
-                        <i class="fas fa-wifi"></i>
+                        <img src="images/images_n1.jpg"
+                            alt="Модернизация Wi-Fi сети">
+                        <div class="project-img-overlay">
+                            <a href="#" class="view-project-btn">Подробнее</a>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Модернизация Wi-Fi сети</h3>
                         <div class="project-tags">
                             <span class="tag infrastructure">Инфраструктура</span>
-                            <span class="tag">Завершен</span>
+                            <span class="tag completed">Завершен</span>
                             <span class="tag">2023</span>
                         </div>
                         <p>Полное обновление беспроводной сети колледжа с установкой 50+ точек доступа. Увеличение
                             скорости в 3 раза и расширение зоны покрытия.</p>
+                        <div class="project-status status-completed">Завершен</div>
                     </div>
                 </div>
 
                 <!-- Проект 2 -->
                 <div class="project-card" data-category="software education">
                     <div class="project-img">
-                        <i class="fas fa-graduation-cap"></i>
+                        <img src="images/images_n2.jpg"
+                            alt="Внедрение СДО Moodle">
+                        <div class="project-img-overlay">
+                            <a href="#" class="view-project-btn">Подробнее</a>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Внедрение СДО Moodle</h3>
                         <div class="project-tags">
                             <span class="tag software">ПО</span>
                             <span class="tag education">Образование</span>
-                            <span class="tag">В работе</span>
+                            <span class="tag in-progress">В работе</span>
                         </div>
                         <p>Развертывание системы дистанционного обучения для 2000+ студентов и 150+ преподавателей.
                             Интеграция с электронным журналом.</p>
+                        <div class="project-status status-in-progress">В работе</div>
                     </div>
                 </div>
 
                 <!-- Проект 3 -->
                 <div class="project-card" data-category="security">
                     <div class="project-img">
-                        <i class="fas fa-shield-alt"></i>
+                        <img src="images/images_n3.jpg"
+                            alt="Система кибербезопасности">
+                        <div class="project-img-overlay">
+                            <a href="#" class="view-project-btn">Подробнее</a>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Система кибербезопасности</h3>
                         <div class="project-tags">
                             <span class="tag security">Безопасность</span>
-                            <span class="tag">Завершен</span>
+                            <span class="tag completed">Завершен</span>
                             <span class="tag">2024</span>
                         </div>
                         <p>Внедрение многоуровневой системы защиты данных: брандмауэры, антивирусы, шифрование и
                             обучение сотрудников.</p>
+                        <div class="project-status status-completed">Завершен</div>
                     </div>
                 </div>
 
                 <!-- Проект 4 -->
                 <div class="project-card" data-category="infrastructure">
                     <div class="project-img">
-                        <i class="fas fa-cloud"></i>
+                        <img src="images/images_n4.jpg"
+                            alt="Миграция в облако">
+                        <div class="project-img-overlay">
+                            <a href="#" class="view-project-btn">Подробнее</a>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Миграция в облако</h3>
                         <div class="project-tags">
                             <span class="tag infrastructure">Инфраструктура</span>
-                            <span class="tag">Завершен</span>
+                            <span class="tag completed">Завершен</span>
                             <span class="tag">2022</span>
                         </div>
                         <p>Перенос почты, документов и систем колледжа на защищенные облачные платформы с резервным
                             копированием.</p>
+                        <div class="project-status status-completed">Завершен</div>
                     </div>
                 </div>
 
                 <!-- Проект 5 -->
-                <div class="project-card" data-category="software">
+                <div class="project-card" data-category="software automation">
                     <div class="project-img">
-                        <i class="fas fa-ticket-alt"></i>
+                        <img src="images/images_n5.jpg"
+                            alt="Система тикетов">
+                        <div class="project-img-overlay">
+                            <a href="#" class="view-project-btn">Подробнее</a>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Система тикетов</h3>
                         <div class="project-tags">
                             <span class="tag software">ПО</span>
-                            <span class="tag">Завершен</span>
+                            <span class="tag automation">Автоматизация</span>
+                            <span class="tag completed">Завершен</span>
                             <span class="tag">2023</span>
                         </div>
-                        <p>Внедрение системы GLPI для автоматизации IT-поддержки. Сократили время реакции на заявки
-                            на
+                        <p>Внедрение системы GLPI для автоматизации IT-поддержки. Сократили время реакции на заявки на
                             40%.</p>
+                        <div class="project-status status-completed">Завершен</div>
                     </div>
                 </div>
 
                 <!-- Проект 6 -->
                 <div class="project-card" data-category="education">
                     <div class="project-img">
-                        <i class="fas fa-video"></i>
+                        <img src="images/images_n6.jpg"
+                            alt="ВКС для дистанта">
+                        <div class="project-img-overlay">
+                            <a href="#" class="view-project-btn">Подробнее</a>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>ВКС для дистанта</h3>
                         <div class="project-tags">
                             <span class="tag education">Образование</span>
-                            <span class="tag">В работе</span>
+                            <span class="tag in-progress">В работе</span>
                         </div>
                         <p>Развертывание системы видеоконференцсвязи в 20 аудиториях для гибридного обучения и
                             онлайн-совещаний.</p>
+                        <div class="project-status status-in-progress">В работе</div>
                     </div>
                 </div>
             </div>
-        </div>
+
+           
     </section>
 
+    <!-- Остальные разделы остаются без изменений -->
     <!-- Услуги -->
     <section class="services" id="services">
         <div class="container">
@@ -373,8 +406,7 @@
                         <i class="fas fa-server logo-icon"></i>
                         <span class="logo-text">IT-отдел колледжа</span>
                     </div>
-                    <p style="margin-top: 15px; color: #ddd;">Технологии на службе образования. Стабильная работа —
-                        наша
+                    <p style="margin-top: 15px; color: #ddd;">Технологии на службе образования. Стабильная работа — наша
                         основа.</p>
                 </div>
 
@@ -415,6 +447,8 @@
             </div>
         </div>
     </footer>
+
+
 </body>
 
 </html>
